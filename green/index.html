@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none; color: inherit;}
+        address {font-style: normal;}
+        body {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #333;
+        }
+        /* 상단 */
+        header {
+            width: 100%;
+            height: 60px;
+            display: grid;
+            grid-template-rows: 60px;
+            grid-template-columns: 750px 450px;
+            align-items: center;
+            
+        }
+        header ul {
+            display: grid;
+            grid-template-rows: 60px;
+            grid-template-columns:repeat(4, 125px);
+            align-items: center;
+        }
+        header ul li {
+            width: 70%;
+        }
+        header ul li:not(:last-child) {
+            border-right: 1px solid #333;
+        }
+        /* 상단 끝 */
+        /* 메인 */
+        .container {
+            padding: 30px 0;
+        }
+        h2 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+        .main_con ul {
+            padding: 50px 0;
+            display: grid;
+            grid-template-rows: 120px;
+            grid-template-columns: repeat(3, 400px);
+            align-items: center;
+            justify-items: center;
+        }
+        .main_con ul li {
+            border: 1px solid #ccc;
+            padding: 40px 90px; 
+        }
+        .notice ul {
+            margin-top: 20px;
+        }
+        .notice ul li {
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        footer {
+            width: 100%;
+            height: 60px;
+            display: grid;
+            grid-template-rows: 60px;
+            grid-template-columns: 700px 100px;
+            justify-content: space-between;
+        }
+        /* 메인 끝 */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Green</h1>
+        <ul>
+            <li><a href=""> menu1</a></li>
+            <li><a href=""> menu2</a></li>
+            <li><a href=""> menu3</a></li>
+            <li><a href=""> menu4</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="main_con">
+            <h2>메인컨텐츠01</h2>
+            <ul>
+                <li>
+                    <h3>작은제목 입니다.</h3>
+                    <p>내용적는 부분입니다.</p>
+                    <span>2020.12.17</span>
+                </li>
+                <li>
+                    <h3>작은제목 입니다.</h3>
+                    <p>내용적는 부분입니다.</p>
+                    <span>2020.12.17</span>
+                </li>
+                <li>
+                    <h3>작은제목 입니다.</h3>
+                    <p>내용적는 부분입니다.</p>
+                    <span>2020.12.17</span>
+                </li>
+            </ul>
+        </div>
+        <div class="notice">
+            <h2>공지사항</h2>
+            <ul>
+                <li><a href="#">그린컴퓨터 아카데미 소식20220.12.17</a></li>
+                <li><a href="">코로나 바이러스 예방법2020.12.17</a></li>
+                <li><a href="#">그린컴퓨터 아카데미 소식20220.12.17</a></li>
+                <li><a href="">코로나 바이러스 예방법2020.12.17</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <address>주소: 서울특별시 용산구 한강대로 대표이사: 그린 사업자등록번호: 110-12-12345 통신판매신고: 제 2020-서울용산-000호</address>
+        <h1>Green</h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+h1, h2, h3, h4, h5, h6, address {font-style: normal;}
+/* reset */
+
+body {
+    background: #ccc;
+    color: #fff;
+    font-family: '맑은 고딕', sans-serif;
+    line-height: 1.6;
+}
+.inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* 상단 */
+#mobile_menu, #mobile_img {display: none;}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    z-index: 10;
+}
+header > ul {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+header > ul li {
+    padding: 16px 10px;
+    font-size: 14px;
+}
+header > div h1 {
+    width: 20%;
+    display: flex;
+}
+header > div {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(/img/header_bg.png);
+}
+header > div img {
+    width: 70%;
+    text-align: center;
+    margin-left: 30px;
+}
+header > div ul {
+    display: flex;
+    font-size: 16px;
+}
+header > div ul li {
+    padding: 0 16px;
+}
+.sns li {
+    background-color: blueviolet;
+    margin-right: 10px;
+    padding: 12px 14px;
+    font-size: 12px;
+}
+/* 상단 끝 */
+/* 본문 */
+.con_1 {
+    background: url(/img/main_visual.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 200px;
+    height: 700px;
+}
+.con_1 h2 {
+    text-align: center;
+}
+.con_1 ul {
+    display: flex;
+    width: 1200px;
+    text-align: center;
+
+}
+.con_1 ul li {
+    width: 25%;
+}
+.out {
+    height: 120px;
+}
+.con_1 ul li:nth-child(1) .out{
+    background-color: #7b70ac;
+}
+.con_1 ul li:nth-child(2) .out{
+    background-color: #ba70a5;
+}
+.con_1 ul li:nth-child(3) .out{
+    background-color: #c19596;
+}
+.con_1 ul li:nth-child(4) .out{
+    background-color: #c2b497;
+}
+/* 본문 끝 */

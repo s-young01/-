@@ -1,0 +1,294 @@
+body {
+    color: #333;
+}
+/* 상단 */
+#header {
+    border: 1px solid #ccc;
+}
+#header .inner_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.logo_area {
+    display: flex;
+    align-items: center;
+}
+.logo_area ul {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-left: 16px;
+}
+.logo_area ul li {
+    padding: 6px;
+    font-size: 12px;
+}
+.logo_area ul li:last-child {
+    background-color: #ccc;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav > ul {
+    display: flex;
+}
+.nav > ul li {
+    padding: 0 16px;
+    font-size: 14px;
+}
+.nav2 {
+    position: relative;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+    margin-right: 16px;
+}
+.nav2 ul {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    line-height: 22px;
+}
+.nav2 ul li a {
+    display: block;
+}
+.nav2 ul li:last-child {
+    display: none;
+}
+.nav2:hover ul {
+    border: 1px solid #007aff;
+}
+.nav2 ul:hover li:last-child {
+    display: block;
+}
+.nav2 ul li:first-child:hover a:first-child {
+    background-color: #007aff;
+    color: #fff;
+}
+.nav2 ul li:last-child:hover a:last-child {
+    background-color: #007aff;
+    color: #fff;
+}
+.nav button {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-right: 6px;
+}
+/* 상단 끝 */
+/* 로그인 */
+#main_content .inner_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+#visual {
+    display: flex;
+    justify-content: space-between;
+}
+.login {
+    width: 30%;
+}
+#login {
+    background-color: #eaf4fe;
+    padding: 24px 16px;
+    border-radius: 8px;
+    color: #fff;
+}
+.login_button {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007aff;
+    border-radius: 8px;
+    display: block;
+    padding: 14px 0;
+
+}
+#login ul {
+    display: flex;
+    border: 1px solid #007aff;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+#login ul li {
+    width: 50%;
+    color: #007aff;
+    text-align: center;
+    font-size: 14px;
+    padding: 14px 0;
+}
+#login ul li:first-child {
+    border-right: 1px solid #007aff;
+}
+.logim_img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.logim_img li {
+    width: 23%;
+    text-align: center;
+    padding-top: 30px;
+}
+.logim_img img {
+    width: 50px;
+    height: auto;
+}
+.logim_img span {
+    display: block;
+    font-size: 12px;
+}
+/* 로그인 끝 */
+/* 메인 이미지 */
+#right {
+    width: 65%;
+}
+#right div {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+#right img {
+    width: 80%;
+}
+#right h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#right p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+/* 메인 이미지 끝 */
+/* 보험상품 */
+#insurance_story {
+    background-color: #dfe6f9;
+    position: relative;
+    margin-bottom: 80px;
+}
+#insurance_story .inner_wrap {
+    padding: 70px 0;
+}
+.main_tit {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.main_tit span {
+    font-size: 38px;
+    font-weight: bold;
+}
+.text-box {
+    display: flex;
+    height: 180px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+.text-box li {
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 40px 40px 0 40px;
+    padding: 30px;
+    width: 22%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,30%); 
+}
+.text-box li:nth-child(even) {
+    align-self: flex-end;
+}
+.link_div {
+    width: 1200px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    bottom: -60px;
+    left: calc(50% - 600px);
+    box-shadow: 2px 2px 8px rgba(0,0,0,20%);
+}
+.link_div ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 24px;
+    font-size: 12px;
+}
+.link_div ul li {
+    width: 18%;
+}
+.link_div ul a {
+    display: block;
+    text-align: center;
+}
+.link_div ul span {
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    margin-bottom: 5px;
+}
+.link_div ul li:nth-child(1) span {
+    background-color: #6175ba;
+}
+.link_div ul li:nth-child(2) span {
+    background-color: #439f88;
+}
+.link_div ul li:nth-child(3) span {
+    background-color: #6f9c47;
+}
+.link_div ul li:nth-child(4) span {
+    background-color: #6175ba;
+}
+.link_div ul li:nth-child(5) span {
+    background-color: #508ed9;
+}
+/* 보험상품 끝 */
+/* 라이프 */
+#life ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+#life ul li {
+    width: 22%;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+#life ul li img {
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+#life ul li p {
+    text-align: center;
+    font-size: 14px;
+    padding: 30px 50px;
+}
+/* 라이프 끝 */
+/* 광고 */
+#main_banner {
+    background-color: #f2f8ff;
+}
+#main_banner ul {
+    display: flex;
+    justify-content: space-between;
+}
+#main_banner ul li {
+    display: flex;
+}
+/* 광고 끝 */

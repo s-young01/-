@@ -1,0 +1,344 @@
+* { margin: 0; padding: 0; box-sizing: border-box; 
+    vertical-align: baseline;
+}
+a { text-decoration: none; color: inherit; }
+li { list-style: none;}
+img { border: 0; }
+
+body {
+    background-image: url(/images/body_bg.png);
+}
+#wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 80%;
+}
+/* 상단 */
+header {
+    height: 80px;
+    background-color: #2ecc71;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+header h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 140px;
+    background-color: #2ecc71;
+    text-align: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+header > div {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    display: flex;
+}
+header ul li {
+    padding: 0 16px;
+}
+.toggle {
+    display: none;
+}
+/* 상단 끝 */
+/* 메인 */
+.slider_section {
+    background: url(/images/slider_01.jpg) center center no-repeat;
+    width: 50%;
+    background-size: cover;
+    position: relative;
+}
+.slider_section a {
+    display: block;
+    width: 34px;
+    height: 39px;
+    background-image: url(../images/slider_arrow.png);
+    font-size: 0;
+    position: absolute;
+    top: calc(50% - 15px);
+}
+.prev {
+    left: -10px;
+    background-position: left top;
+}
+.next {
+    right: -10px;
+    background-position: right top;
+}
+#contents {
+    display: flex;
+    flex-wrap: wrap;
+}
+.post_section {
+    background-color: #e65d5d;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+}
+.post_section ul {
+    width: 70%;
+    text-align: center;
+}
+.post_section ul li {
+    margin-bottom: 16px;
+}
+.post_section ul li img {
+    width: 100%;
+}
+.rankup_section {
+    background-color: #219af7;
+    width: 20%;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.rankup_section h3 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.latest_section {
+    background-color: #ffc40f;
+    color: #fff;
+    width: 30%;
+    padding: 40px;
+    height: 300px;
+}
+.latest_section h3 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.popular_section {
+    background-color: #a660c2;
+    color: #fff;
+    width: 30%;
+    padding: 40px;
+}
+.popular_section h3 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.banner_section {
+    background-color: #e6567a;
+    width: 25%;
+}
+.banner_section div {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_section div ul {
+    display: flex;
+}
+.banner_section div:last-child {
+    background-color: rgba(0,0,0,0.3);
+}
+.banner_section div:last-child li {
+    padding: 0 10px;
+}
+.social_section {
+    background-color: lightsteelblue;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_section ul li {
+    margin-bottom: 10px;
+}
+/* 메인 끝 */
+/* 하단 */
+footer {
+    background-color: #333;
+    color: #fff;
+    height: 80px;
+    padding: 30px;
+}
+/* 하단 끝 */
+
+/* 반응형 */
+/* 950이하일 때 */
+@media screen and (max-width: 950px) {
+    header {
+        height: 140px;
+        align-items: flex-start;
+    }
+    header h1 {
+        top: 50px;
+        width: 20%;
+        font-size: 24px;
+        padding-top: 50px;
+    }
+    header > div {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+    header > div ul {
+        justify-content: space-between;
+    }
+    header > div ul:nth-child(1) {
+        display: none;
+    }
+    header > div ul:nth-child(2) {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+        height: 50px;
+    }
+    header > div ul:nth-child(2) li {
+        width: 25%;
+        text-align: center;
+    }
+    .toggle {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .toggle span {
+        background-color: #2ecc71;
+        width: 60%;
+        height: 3px;
+        margin: 2px;
+    }
+    #content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .slider_section {
+        width: 60%;
+        background-size: cover;
+        order: 1;
+    }
+    .post_section {
+        width: 70%;
+        order: 6;
+    }
+    .post_section ul {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .post_section ul li {
+        width: 45%;
+        padding: 0;
+    }
+    .rankup_section {
+        width: 40%;
+        order: 2;
+        padding: 40px;
+    }
+    .rankup_section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .rankup_section ul li {
+        width: 48%;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    }
+    .latest_section {
+        width: 42.5%;
+        order: 3;
+    }
+    .popular_section {
+        width: 42.5%;
+        order: 4;
+    }
+    .banner_section {
+        width: 30%;
+        order: 7;
+    }
+    .social_section {
+        width: 15%;
+        order: 5;
+    }
+}
+/* 750이하일 때 */
+@media screen and (max-width: 750px) {
+    header {
+        height: 200px;
+    }
+    header h1 {
+        width: 100%;
+    }
+    .toggle {
+        z-index: 2;
+    }
+    #content {
+        display: flex;
+    }
+    .slider_section {
+        width: 100%;
+        background-size: cover;
+        height: 400px;
+        order: 1;
+    }
+    .post_section {
+        width: 100%;
+        order: 4;
+    }
+    .post_section ul {
+        flex-direction: column;
+    }
+    .post_section ul li {
+        width: 100%;
+    }
+    .rankup_section {
+        width: 100%;
+        order: 5;
+    }
+    .latest_section {
+        width: 100%;
+        order: 2;
+    }
+    .popular_section {
+        width: 100%;
+        height: 300px;
+        order: 3;
+    }
+    .banner_section {
+        width: 100%;
+        height: 300px;
+        order: 6;
+    }
+    .social_section {
+        width: 100%;
+        order: 7;
+    }
+    .social_section ul {
+        display: flex;
+        padding: 20px;
+    }
+    .social_section ul li {
+        padding: 0 20px;
+    }
+}

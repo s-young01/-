@@ -1,0 +1,122 @@
+// 변수선언
+$bgcolor: black;
+$darkcolor: #222;
+$bordercolor: #ccc;
+$lightcolor: #fff;
+$footercolor: aliceblue;
+$default-space: 16px;
+$headerheight: 80px;
+// Mixins 선언
+@mixin flexbox($direction:row, $just:space-between, $align:center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $just;
+    align-items: $align;
+    @content;
+}
+
+.inner_con {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+body {
+    font-size: 14px;
+    font-family: "맑은 고딕", sans-serif;
+    line-height: 1.6;
+}
+#header {
+    background: $bgcolor;
+    color: $lightcolor;
+    .inner_con {
+        @include flexbox();
+        height: $headerheight;
+        ul {
+            @include flexbox();
+            li {
+                padding: 0 $default-space;
+            }
+        }
+    }
+}
+#visual {
+    background: $bgcolor;
+    color: $lightcolor;
+    img {
+        width: 100%;
+    }
+}
+#product_menu {
+    @include flexbox();
+    height: 120px;
+    border-bottom: 3px double $bordercolor;
+    ul {
+        @include flexbox();
+        li {
+            padding: 0 $default-space;
+        }
+    }
+}
+#product_list {
+    text-align: center;
+    padding: $default-space;
+    h3 {
+        padding: $default-space * 2;
+    }
+    ul {
+        @include flexbox();
+        img {
+            width: 100%;
+        }
+    }
+}
+@mixin layout($width, $height) {
+    width: $width;
+    height: $height;
+}
+#banner {
+    div {
+        float: left;
+        &:nth-child(1) {
+            @include layout(50%, 500px);
+        }
+        &:nth-child(2) {
+            @include layout(50%, 250px);
+        }
+        &:nth-child(3) {
+            @include layout(25%, 250px);
+        }   
+        &:nth-child(4) {
+            @include layout(25%, 250px);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }  
+    }
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+#footer_menu {
+    background: $footercolor;
+    @include flexbox();
+    height: 80px;
+    padding: $default-space;
+    ul {
+        @include flexbox();
+        li {
+            padding: 0 $default-space;
+        }
+    }
+}
+#footer_copy {
+    @include flexbox();
+    height: 80px;
+    address {
+        width: 70%;
+    }
+}

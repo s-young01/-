@@ -1,0 +1,264 @@
+// 변수선언
+$color: #333;
+$bordercolor: #ccc;
+$white: #fff;
+$yellowbg: rgb(255, 204, 0);
+$mainckcolor: rgb(0, 132, 203);
+$quickcolor1: rgb(0, 142, 214);
+$quickcolor2: rgb(25, 204, 201);
+$quickcolor3: rgb(44, 173, 239);
+$quickcolor4: rgb(66, 90, 211);
+$quickblur: rgba(0, 0, 0, 0.2);
+$blogbg: #efefef;
+$con_width: 1200px;
+$default_gap: 16px;
+$con_gap: 60px;
+// mixin 선언
+@mixin felxbox($dir:row, $just:space-between, $align:center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+    @content
+}
+@mixin position($po:absolute, $t:null, $l:null, $b:null, $r:null) {
+    position: $po;
+    top: $t;
+    left: $l;
+    bottom: $b;
+    right: $r;
+}
+
+.inner_container {
+    width: 100%;
+    max-width: $con_width;
+    margin: 0 auto;
+}
+body {
+    font-family: "나눔 고딕", "맑은 고딕" sans-serif;
+    font-size: 14px;
+    color: $color;
+    line-height: 1.6;
+}
+// 상단 
+#top_gnb {
+    border-bottom: 1px solid $bordercolor;
+    height: 50px;
+    ul {
+        @include felxbox($just:flex-end);
+        height: 50px;
+        li {
+            padding: 0 $default_gap/2;
+        }
+    }
+}
+#top_menu {
+    @include felxbox();
+    input {
+        border: 1px solid $bordercolor;
+    }
+    padding: $default_gap;
+    ul {
+        @include felxbox();
+        li {
+            padding: 0 $default_gap;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                height: 8px;
+                width: 20px;
+                background-color: $mainckcolor;
+                transition: 0.5s;
+                @include position($t:-15px, $l:0);
+                opacity: 0;
+            }
+            &:hover::after {
+                top: -5px;
+                opacity: 1;
+            }
+        }
+    }
+}
+// 상단 끝
+// 메인
+main {
+    section {
+        padding: $con_gap 0;
+    }
+    .title {
+        text-align: center;
+        padding-bottom: $default_gap*2;
+        h2 {
+            font-size: 38px;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 24px;
+        }
+    }
+    #visual {
+        background-color: $yellowbg;
+        color: $white;
+        img {
+            width: 100%;
+        }
+    }
+    #info {
+        h2 {
+            color: $mainckcolor;
+        }
+        ul {
+            @include felxbox();
+            li {
+                text-align: center;
+                width: 30%;
+                &:hover a {
+                    background-color: $mainckcolor;
+                    color: $white;
+                }
+                img {
+                    width: 80%;
+                }
+                h3 {
+                    padding-top: $default_gap;
+                }
+                a {
+                    display: inline-block;
+                    width: 120px;
+                    border: 1px solid $mainckcolor;
+                    line-height: 40px;
+                    margin-top: $default_gap;
+                }
+            }
+        }
+    }
+    #blog {
+        background-color: $blogbg;
+        ul {
+            @include felxbox();
+            li {
+                width: 24%;
+                background-color: $white;
+                // li에 마우스 올렸을 때
+                &:hover > div:nth-child(1) .blackbg {
+                    opacity: 1;
+                }
+                img {
+                    width: 100%;
+                }
+                .text {
+                    padding: $default_gap/2;
+                }
+                > div {
+                    &:nth-child(1) {
+                        position: relative;
+                        .blackbg {
+                            @include position($t:0, $l:0);
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+                            opacity: 0;
+                            transition: 0.5s;
+                            a {
+                                @include position($t:50%, $l:50%);
+                                display: inline-block;
+                                width: 100px;
+                                line-height: 40px;
+                                border: 1px solid $white;
+                                color: $white;
+                                text-align: center;
+                                transform: translate(-50%, -50%);
+                                &:hover {
+                                    background-color: $white;
+                                    color: $color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #quick {
+        ul {
+            @include felxbox();
+            li {
+                width: 24%;
+                text-align: center;
+                height: 200px;
+                color: $white;
+                position: relative;
+                overflow: hidden;
+                &:nth-child(1) {background-color: $quickcolor1;}
+                &:nth-child(2) {background-color: $quickcolor2;}
+                &:nth-child(3) {background-color: $quickcolor3;}
+                &:nth-child(4) {background-color: $quickcolor4;}
+                // li에 마우스 올렸을 때
+                &:hover .move {
+                    top: -200px;
+                }
+                .move {
+                    @include position($t:0, $l:0);
+                    height: 400px;
+                    transition: 0.5s;
+                    width: 100%;
+                    div {
+                        height: 200px;
+                        padding: 0 $default_gap;
+                        @include felxbox(column, center, center);
+                        &:nth-child(2) {
+                            background-color: $quickblur;
+                            a{
+                                width: 100px;
+                                border: 1px solid $white;
+                                line-height: 30px;
+                                margin-top: $default_gap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 메인 끝
+// 하단 
+footer {
+    #footer_menu {
+        border-top: 1px solid $bordercolor;
+        border-bottom: 1px solid $bordercolor;
+        div {
+            @include felxbox();
+            border-right: 1px solid $bordercolor;
+            border-left: 1px solid $bordercolor;
+            ul {
+                @include felxbox();
+                li {
+                    border-right: 1px solid $bordercolor;
+                }
+            }
+            a {
+                line-height: 50px;
+                padding: 0 $default_gap;
+            }
+            > a {
+                border-left: 1px solid $bordercolor;
+            }
+        }
+    }
+    > .inner_container {
+        @include felxbox();
+        height: 120px;
+        address {
+            width: 60%;
+        }
+        ul {
+            @include felxbox();
+            li {
+                padding: 0 $default_gap;
+            }
+        }
+    }
+}
+// 하단 끝

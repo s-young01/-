@@ -1,0 +1,396 @@
+body {
+    font-family: "맑은 고딕", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    letter-spacing: -2px;
+}
+.inner_wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#main_content .inner_wrap {
+    padding: 70px 0;
+}
+.main_tit {
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 30px;
+}
+.main_tit span {
+    font-size: 36px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+/* 상단 */
+#header {
+    border-bottom: 1px solid #ccc;
+}
+#header .inner_wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+.logo_area {
+    display: flex;
+    align-items: center;
+}
+.logo_area h1 {
+    font-size: 0;
+    width: 260px;
+    height: 80px;
+    background: url(../images/logo.png) center center/220px auto no-repeat;
+}
+.logo_area ul {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+.logo_area ul li {
+    padding: 10px;
+}
+.logo_area ul li:last-child {
+    background-color: #ccc;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav > ul {
+    display: flex;
+}
+.nav > ul li {
+    padding: 0 16px;
+}
+.nav button {
+    border: 1px solid #ccc;
+    background-color: transparent;
+    padding: 2px 6px;
+    margin: 3px;
+}
+.nav div {
+    position: relative;
+    width: 100px;
+    height: 30px;
+}
+.nav div ul {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.nav div ul li {
+    line-height: 30px;
+}
+.nav div ul li:nth-child(2) {
+    display: none;
+}
+.nav div ul:hover li:nth-child(2) {
+    display: block;
+}
+.nav div ul:hover {
+    border: 1px solid #007aff;
+    color: #007aff;
+}
+.nav div ul li:hover {
+    background-color: #007aff;
+    color: #fff;
+}
+/* 상단 끝 */
+
+/* 메인 */
+/* 비주얼 */
+#visual {
+    display: flex;
+    justify-content: space-between;
+}
+#left {
+    width: 35%;
+    text-align: center;
+}
+#left div {
+    background-color: #eaf4fe;
+    border-radius: 10px;
+    padding: 24px 16px;
+}
+#left div > a {
+    background-color: #007aff;
+    display: block;
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 70px;
+    margin-bottom: 8px;
+}
+#left div ul {
+    border-radius: 10px;
+    border: 1px solid #007aff;
+    background-color: #fff;
+    display: flex;
+}
+#left div ul li {
+    line-height: 50px;
+    width: 50%;
+    color: #007aff;
+}
+#left div ul li:first-child {
+    border-right: 1px solid #007aff;
+}
+#left > ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#left > ul li {
+    width: 25%;
+    text-align: center;
+    padding: 10px 16px;
+}
+#left > ul li i {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+#left > ul li i img {
+    width: 100%;
+}
+#right {
+    width: 60%;
+    text-align: center;
+}
+#right img {
+    width: 100%;
+}
+#right h2 {
+    font-size: 24px;
+    padding-top: 20px;
+}
+/* 비주얼 끝 */
+/* 보험 */
+#insurance_story {
+    background-color: #dfe6f9;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.text-box {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    align-items: flex-start;
+}
+.text-box li {
+    width: 22%;
+    background-color: #fff;
+    border-radius: 40px 40px 0 40px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    padding: 30px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.text-box li:nth-child(even) {
+    align-self: flex-end;
+}
+.link_div {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 120px;
+    bottom: -60px;
+    border-radius: 20px;
+}
+.link_div ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+}
+.link_div ul li {
+    width: 14%;
+    text-align: center;
+}
+.link_div ul li span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+}
+.link_div ul li span i {
+    color: #fff;
+}
+.link_div ul li:nth-child(1) span {
+    background-color: #6175ba;
+}
+.link_div ul li:nth-child(2) span {
+    background-color: #439f88;
+}
+.link_div ul li:nth-child(3) span {
+    background-color: #6f9c47;
+}
+.link_div ul li:nth-child(4) span {
+    background-color: #6175ba;
+}
+.link_div ul li:nth-child(5) span {
+    background-color: #508ed9;
+}
+/* 보험 끝 */
+/* 라이프 */
+#life ul {
+    display: flex;
+    justify-content: space-between;
+}
+#life ul li {
+    width: 22%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+#life ul li img {
+    width: 100%;
+}
+#life ul li p {
+    text-align: center;
+    padding: 30px;
+}
+/* 라이프 끝 */
+/* 메인배너 */
+#main_banner {
+    background-color: #f2f8ff;
+}
+#main_banner ul {
+    display: flex;
+}
+#main_banner ul li {
+    width: 50%;
+    display: flex;
+    align-items: center;justify-content: space-between;
+    padding: 0 30px;
+}
+#main_banner ul li span {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    padding-top: 20px;
+}
+#main_banner ul li span img {
+    width: 70%;
+}
+#main_banner ul li h3 {
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* 매인배너 끝 */
+/* 커뮤니티 */
+#main_community {
+    display: flex;
+    justify-content: space-between;
+}
+#main_community > div {
+    width: 45%;
+}
+#main_community .main_tit {
+    text-align: left;
+}
+#commu_left li {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 10px;
+}
+#commu_left li strong {
+    color: #007aff;
+    padding: 0 10px;
+}
+.event {
+    padding-bottom: 30px;
+}
+.event div {
+    background: url(../images/banner01.png) right center/auto 100% no-repeat;
+    background-color: rgb(224,227,241);
+    height: 200px;
+    border-radius: 30px;
+    padding: 40px 30px;
+}
+.event div h3 {
+    font-size: 26px;
+    font-weight: bold;
+    width: 40%;
+    line-height: 1.3;
+    padding-bottom: 30px;
+}
+.notice li {
+    line-height: 30px;
+}
+.notice li span {
+    padding-right: 30px;
+    letter-spacing: 0.5px;
+}
+/* 커뮤니티 끝 */
+/* 추천상품 */
+#recommand ul {
+    display: flex;
+    justify-content: space-between;
+}
+#recommand ul li {
+    width: 22%;
+    background-color: #508ed9;
+    color: #fff;
+    border-radius: 16px;
+    padding: 30px;
+}
+#recommand ul li strong {
+    display: block;
+    padding-top: 10px;
+    font-size: 20px;
+}
+/* 추천상품 끝 */
+/* 메인 끝 */
+
+/* 하단 */
+#footer_menu {
+    background-color: #ededed;
+}
+#footer_menu ul {
+    display: flex;
+    text-align: center;
+    border-left: 1px solid #ccc;
+}
+#footer_menu li {
+    line-height: 60px;
+    width: 25%;
+    padding-left: 20px;
+    border-right: 1px solid #ccc;
+}
+#footer_copy div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+#footer_copy ul {
+    display: flex;
+    padding-left: 20px;
+}
+#footer_copy ul li {
+    padding: 0 16px;
+}
+#footer_copy address {
+    text-align: center;
+    padding: 20px;
+}
+/* 하단 끝 */
